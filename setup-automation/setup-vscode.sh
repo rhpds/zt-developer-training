@@ -4,7 +4,7 @@ USER=rhel
 echo "Adding wheel" > /root/post-run.log
 usermod -aG wheel rhel
 
-echo "Setup vm vscode > /tmp/progress.log
+echo "Setup vm vscode" > /tmp/progress.log
 
 chmod 666 /tmp/progress.log 
 
