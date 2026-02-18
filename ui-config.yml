@@ -14,8 +14,11 @@ antora:
       label: "Tabs"
 
 tabs:
+  - name: "VSCode"
+    url: https://vscode-${guid}.${domain}/?folder=/home/rhel/
+    external: false
   - name: ">_ terminal"
-    url: /wetty
-  - name: "Asciidoc Doc"
-    url: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
+    url: /wetty_vscode/ssh/root
+  - name: "GitHub"
+    url: https://github.com/rhpds/lab_zero_touch_template/tree/main
     external: true

@@ -1,9 +1,9 @@
 ---
 containers: []
 virtualmachines:
-  - name: "host1"
-    image: "rhel-9.5"
-    memory: "2G"
+  - name: "vscode"
+    image: "rhel-9.6"
+    memory: "8G"
     cores: 1
     image_size: "40G"
     tags:
@@ -11,4 +11,17 @@ virtualmachines:
         value: "bastions"
     networks:
       - default
-      - secondary
+    services:
+      - name: vscode
+        ports:
+          - port: 9090
+            protocol: TCP
+            targetPort: 9090
+            name: vscode
+    routes:
+      - name: vscode
+        host: vscode
+        service: vscode
+        targetPort: 9090
+        tls: true
+        tls_termination: Edge
